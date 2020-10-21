@@ -1,0 +1,16 @@
+<h1> Adding a new product</h1>
+
+<form action="/products/" method="POST">
+<label for="name">Product name</label>
+<input type="text" name="name" id="name" placeholder="product name">
+<label for="price">Price</label>
+<input type="number" name="price" id="price" placeholder="product price">
+<label for="category">Category</label>
+<select name="category" id="category">
+    <option value="" selected disabled hidden>Choose here</option>
+    <option value="fruit">fruit</option>
+    <option value="vegetable">vegetable</option>
+    <option value="dairy">dairy</option>
+</select>
+<button> Submit </button>
+</form>

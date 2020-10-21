@@ -1,0 +1,9 @@
+<h1>
+    List of products:
+</h1>
+
+<ul>
+    <% products.forEach(function(product){ %>
+        <li><a href="/products/<%=product._id%>"> <%= product.name %> </a></li>
+    <% }); %>
+ </ul>
