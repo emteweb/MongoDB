@@ -7,10 +7,14 @@
 <input type="number" name="price" id="price" placeholder="product price" value="<%= product.price %>">
 <label for="category">Category</label>
 <select name="category" id="category">
-    <option value="" selected disabled hidden>Choose here</option>
+    <% categories.forEach((category) => { %>
+        <option value="<%=category %>" <%=product.category === category ? 'selected' : "" %>> <%=category %> </option>
+    <% }) %>
+
+    <!-- <option value="" selected disabled hidden>Choose here</option>
     <option value="fruit">fruit</option>
     <option value="vegetable">vegetable</option>
-    <option value="dairy">dairy</option>
+    <option value="dairy">dairy</option> -->
 </select>
 <button> Submit </button>
 </form>
