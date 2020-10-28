@@ -68,8 +68,14 @@ app.get('/products/:id', async (req, res) => {
 
 // displaying all products
 app.get('/products', async (req, res) => {
-    const products = await Product.find({});
-    res.render('Products/index', {products})
+    const {category} = req.query;
+    if(category){
+        const products = await Product.find({category});
+        res.render('Products/index', {products, category})
+    } else {
+        const products = await Product.find({});
+        res.render('Products/index', {products, category: 'All'})
+    }
 });
 
 

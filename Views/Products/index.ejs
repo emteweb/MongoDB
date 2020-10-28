@@ -1,5 +1,5 @@
 <h1>
-    List of products:
+    <%=category%> products:
 </h1>
 
 <ul>
@@ -7,3 +7,9 @@
         <li><a href="/products/<%=product._id%>"> <%= product.name %> </a></li>
     <% }); %>
  </ul>
+
+ <a href="/products/new"> Add a new product</a>
+
+ <% if(category !== 'All') {%>
+    <a href="/products"> All products</a>
+    <% } %>
